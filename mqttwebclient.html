@@ -43,10 +43,11 @@
                 document.getElementById("messages").innerHTML += '<span>Subscribing to: ' + topic + '</span><br/>';
             
                 // Subscribe to the requested topic
-                 client.subscribe(topic);
-                  message= new Paho.MQTT.Message("Hello World!");
-                  message.destinationName("mess");
-                  client.send(message);
+                client.subscribe(topic);
+                    //Skicka meddelande.
+                     message = new Paho.MQTT.Message("Hello World 2");
+                    message.destinationName = "mess";
+                    client.send(message);
             }
             
             // Called when the client loses its connection
