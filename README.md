@@ -11,6 +11,7 @@ Saker är självförklarande men här kommer en förklaring:
 7. pub.js = Vår publisher kod i nodejs.
 8. sub.j =vår subscriber kod i nodejs.
 9. mqttwebclientConnectToInternet.html  = uppdaterad för att kunna skicka och hämta värden från Maqiatto. Kan kikas på om man vill ha hjälp att koppla upp sig till Maqiatto brokern.
+10. ESPMQTTTOINTERNET.ino = ESP8266 kod för att skicka data till en internet broker (Maqiatto).
 
 
 ## Länkar
