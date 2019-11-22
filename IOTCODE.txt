@@ -1,4 +1,5 @@
 #include "EspMQTTClient.h"
+//Install libraries PubSubClient and EspMQTTClient
 
 void onConnectionEstablished();
 
@@ -28,14 +29,14 @@ bool off=false;
 void lampa(){
   if(off==true)
   {
-  Serial.println("Sl‰ckt!");
+  Serial.println("Sl√§ckt!");
   off=false;
   }
   else
   {
   off=true;
   
-  Serial.println("Sl‰ckt!");
+  Serial.println("Sl√§ckt!");
   }
 
 digitalWrite(led_pin,off);
