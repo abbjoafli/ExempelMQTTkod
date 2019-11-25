@@ -20,3 +20,14 @@ Saker är självförklarande men här kommer en förklaring:
 
 ![alt text](https://www.maqiatto.com/images/maqiattowebsock.png "Maqiatto connect instruktioner")
 
+## Tips för att göra mqttwebclient fungerande med Maqiatto
+Host: maqiatto.com
+Port: 8883
+topic: joakim.flink@abbindustrigymnasium.se/lampa1 //Detta måste du byta ut om ditt Maqiatto konto + /din topicnamn
+
+När vi ansluter till brokern så måste vi skicka med användarnamnet och lösenord, detta lösenordet måste vara generat för mqtt och kan inte vara det som du gjorde när du skapade ditt maqiatto konto!! 
+`      client.connect({userName : "joakim.flink@abbindustrigymnasium.se",password : "apaapaapa",
+                    onSuccess: onConnect,
+                    onFailure: onFail,
+                               });`
+
