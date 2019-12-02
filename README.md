@@ -1,5 +1,5 @@
 # ExempelMQTTkod
-(Sway!)[https://sway.office.com/4wekNvX2nqSH0zCX?ref=Link&loc=mysways]
+[Sway!](https://sway.office.com/4wekNvX2nqSH0zCX?ref=Link&loc=mysways)
 
 ## Exempelkod till videorna med MQTT
 
@@ -31,16 +31,18 @@ Port: 8883
 topic: joakim.flink@abbindustrigymnasium.se/lampa1 //Detta måste du byta ut om ditt Maqiatto konto + /din topicnamn
 
 När vi ansluter till brokern så måste vi skicka med användarnamnet och lösenord, detta lösenordet måste vara generat för mqtt och kan inte vara det som du gjorde när du skapade ditt maqiatto konto!! 
-`      client.connect({userName : "joakim.flink@abbindustrigymnasium.se",password : "apaapaapa",
+```      client.connect({userName : "joakim.flink@abbindustrigymnasium.se",password : "apaapaapa",
                     onSuccess: onConnect,
                     onFailure: onFail,
-                               });`
-                               
+                               });
+
+```                               
                                
                                
 ## Tips för att göra Mqtt på mikrokontrollen fungerande med Maqiatto
 Se till att  Client Name är något unikt, har man samma som andra stör de ut varandra.
-` EspMQTTClient client(
+```
+EspMQTTClient client(
  "Nätverksnamn",           // Wifi ssid
   "Pass",           // Wifi password
   "maqiatto.com",  // MQTT broker ip
@@ -51,5 +53,5 @@ Se till att  Client Name är något unikt, har man samma som andra stör de ut v
   onConnectionEstablished, // Connection established callback
   true,             // Enable web updater
   true              // Enable debug messages
-);`
-
+);
+```
