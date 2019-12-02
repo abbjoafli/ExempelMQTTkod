@@ -35,4 +35,21 @@ När vi ansluter till brokern så måste vi skicka med användarnamnet och löse
                     onSuccess: onConnect,
                     onFailure: onFail,
                                });`
+                               
+                               
+                               
+## Tips för att göra Mqtt på mikrokontrollen fungerande med Maqiatto
+Se till att  Client Name är något unikt, har man samma som andra stör de ut varandra.
+` EspMQTTClient client(
+ "Nätverksnamn",           // Wifi ssid
+  "Pass",           // Wifi password
+  "maqiatto.com",  // MQTT broker ip
+  1883,             // MQTT broker port
+  "något.något@abbindustrigymnasium.se",            // MQTT username
+  "Pass",       // MQTT password
+  "MÅSTE VARA UNIKT!",          // Client name
+  onConnectionEstablished, // Connection established callback
+  true,             // Enable web updater
+  true              // Enable debug messages
+);`
 
