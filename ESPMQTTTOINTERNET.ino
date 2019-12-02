@@ -5,13 +5,13 @@
 void onConnectionEstablished();
 
 EspMQTTClient client(
- "ABB_Indgym_Guest",           // Wifi ssid
-  "Welcome2abb",           // Wifi password
+ "Nätverksnamn",           // Wifi ssid
+  "password",           // Wifi password
   "maqiatto.com",  // MQTT broker ip
   1883,             // MQTT broker port
-  "joakim.flink@abbindustrigymnasium.se",            // MQTT username
-  "apaapaapa",       // MQTT password
-  "microdator",          // Client name
+  "användarnamn på maqiatton",            // MQTT username
+  "password",       // MQTT password
+  "klientnamn",          // Client name
   onConnectionEstablished, // Connection established callback
   true,             // Enable web updater
   true              // Enable debug messages
