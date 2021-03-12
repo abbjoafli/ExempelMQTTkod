@@ -45,14 +45,11 @@ Se till att  Client Name är något unikt, har man samma som andra stör de ut v
 ```
 EspMQTTClient client(
  "Nätverksnamn",           // Wifi ssid
-  "Pass",           // Wifi password
+  "password",           // Wifi password
   "maqiatto.com",  // MQTT broker ip
-  1883,             // MQTT broker port
-  "något.något@abbindustrigymnasium.se",            // MQTT username
-  "Pass",       // MQTT password
-  "MÅSTE VARA UNIKT!",          // Client name
-  onConnectionEstablished, // Connection established callback
-  true,             // Enable web updater
-  true              // Enable debug messages
+  "användarnamn på maqiatton",            // MQTT username
+  "password",       // MQTT password
+  "MÅSTE VARA UNIKT!",         // Client name
+  1883            // MQTT broker port
 );
 ```
