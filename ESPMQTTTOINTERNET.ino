@@ -4,7 +4,8 @@
 
 void onConnectionEstablished();
 
-EspMQTTClient client(
+//Gamla sättet
+/*EspMQTTClient client(
  "Nätverksnamn",           // Wifi ssid
   "password",           // Wifi password
   "maqiatto.com",  // MQTT broker ip
@@ -15,16 +16,27 @@ EspMQTTClient client(
   onConnectionEstablished, // Connection established callback
   true,             // Enable web updater
   true              // Enable debug messages
+);*/
+//Nya sättet!
+EspMQTTClient client(
+ "Nätverksnamn",           // Wifi ssid
+  "password",           // Wifi password
+  "maqiatto.com",  // MQTT broker ip
+  "användarnamn på maqiatton",            // MQTT username
+  "password",       // MQTT password
+  "klientnamn",          // Client name
+  1883            // MQTT broker port
 );
-
-
-
-#define led_pin D1
+ 
+//Extern lampa
+//#define led_pin D1
 
 
 void setup() {
-pinMode(led_pin, OUTPUT);
-digitalWrite(led_pin,LOW);
+//pinMode(led_pin, OUTPUT);//Externlampa 
+//digitalWrite(led_pin,LOW);
+pinMode(LED_BUILTIN, OUTPUT); //Inbyggd lampa på kortet
+digitalWrite(LED_BUILTIN,LOW);
 Serial.begin(115200);
 }
 
@@ -43,7 +55,8 @@ void lampa(){
   Serial.println("Släckt!");
   }
 
-digitalWrite(led_pin,off);
+//digitalWrite(led_pin,off);//Externlampa
+digitalWrite(LED_BUILTIN,off);//Inbyggd lampa på kortet
   
 }
 
